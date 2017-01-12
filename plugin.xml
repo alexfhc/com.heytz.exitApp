@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.heytz.exitApp" version="0.3.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>socketwrapper</name>
+    <js-module name="exitApp" src="www/exitApp.js">
+        <clobbers target="cordova.plugins.exitApp"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="exitApp">
+                <param name="android-package" value="com.heytz.exitApp.exitApp"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"/>
+        <source-file src="src/android/exitApp.java" target-dir="src/com/heytz/exitApp"/>
+    </platform>
+</plugin>
