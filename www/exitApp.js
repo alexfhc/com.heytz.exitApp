@@ -9,7 +9,7 @@ exports.sendCMD = function (ip,
       message
     ]);
 };
-exports.disconnect = function () {
-  exec(null, null, "socketwrapper", "disconnect",
+exports.exitApp = function () {
+  exec(null, null, "exitApp", "exitApp",
     []);
 };
