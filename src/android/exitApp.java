@@ -31,7 +31,7 @@ public class exitApp extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         socketCallbackContext = callbackContext;
         if (action.equals("exitApp")) {
-            System.exit(0)
+            System.exit(0);
             return true;
         }
         return false;
