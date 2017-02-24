@@ -1,12 +1,10 @@
 var exec = require('cordova/exec');
 
-exports.sendCMD = function (ip,
-                            message,
+exports.hideKeyboard = function (
                             success, error) {
-  exec(success, error, "socketwrapper", "sendCMD",
+  exec(success, error, "exitApp", "hideKeyboard",
     [
-      ip,
-      message
+
     ]);
 };
 exports.exitApp = function () {

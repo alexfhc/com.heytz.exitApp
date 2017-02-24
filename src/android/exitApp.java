@@ -10,7 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.OutputStream;
-
+import android.view.inputmethod.InputMethodManager;
 /**
  * This class starts transmit to activation
  */
@@ -34,8 +34,19 @@ public class exitApp extends CordovaPlugin {
             System.exit(0);
             return true;
         }
+         if (action.equals("hideKeyboard")) {
+//                    System.exit(0);
+                    return true;
+        }
         return false;
     }
 
-
+//      public static void HideKeyboard(View v)
+//      {
+//          InputMethodManager imm = ( InputMethodManager ) v.getContext( ).getSystemService( Context.INPUT_METHOD_SERVICE );
+//        if ( imm.isActive( ) ) {
+//            imm.hideSoftInputFromWindow( v.getApplicationWindowToken( ) , 0 );
+//
+//        }
+//      }
 }
